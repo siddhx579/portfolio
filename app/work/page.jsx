@@ -14,7 +14,14 @@ const projects = [
         num: "01",
         category: "frontend",
         title: "Project 1",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius voluptatum numquam qui temporibus, consequuntur minus?"
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius voluptatum numquam qui temporibus, consequuntur minus?",
+        stack: [
+            { name: "HTML 5" },
+            { name: "CSS 3" },
+            { name: "Javascript" },
+        ],
+        image: '/assets/work/thumb1.png',
+    
     },
     {
         num: "02",
