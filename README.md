@@ -1,6 +1,6 @@
 # Portfolio
 
-This repository contains the source code for my personal portfolio website, showcasing my projects, skills, and experiences. The live version is hosted at [Your Portfolio Link](https://your-portfolio-link.com).
+This repository contains the source code for my personal portfolio website, showcasing my projects, skills, and experiences. The live version is hosted at [Portfolio](https://siddhant-k.vercel.app/).
 
 ## 🚀 Technologies Used
 
@@ -19,7 +19,7 @@ Ensure you have **Node.js** and **npm/yarn** installed.
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/siddhx579/portfolio.git
    cd portfolio
 
 2. **Install dependencies**:
@@ -64,4 +64,4 @@ Contributions are welcome! To contribute:
 
 ### License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/siddhx579/portfolio/blob/master/LICENSE).
