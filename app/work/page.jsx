@@ -13,45 +13,73 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
     {
         num: "01",
-        category: "frontend",
+        category: "Nestal",
         title: "Project 1",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius voluptatum numquam qui temporibus, consequuntur minus?",
+        description: "It is a full-stack web application designed for house renting. It includes a front-end built with React.js and a back-end powered by Node.js and Express, with MongoDB as the database.",
         stack: [
-            { name: "HTML 5" },
-            { name: "CSS 3" },
-            { name: "Javascript" },
+            { name: "React.js" },
+            { name: "Node.js" },
+            { name: "MongoDB" },
         ],
         image: "/assets/work/thumb1.png",
         live: "",
-        github: "",
+        github: "https://github.com/siddhx579/Nestal",
     },
     {
         num: "02",
-        category: "mern stack",
+        category: "MockMate",
         title: "Project 2",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda magnam eos numquam!",
+        description: "This is a full stack AI mock interview app with Next.js | React, Drizzle ORM, Gemini AI, Clerk",
         stack: [
             { name: "Next.js" },
-            { name: "Tailwind.css" },
-            { name: "Node.js" },
+            { name: "Gemini AI" },
+            { name: "Drizzle ORM" },
         ],
-        image: "/assets/work/thumb2.png",
-        live: "",
-        github: "",
+        image: "/assets/work/thumb5.png",
+        live: "https://mockmate-interviewer.vercel.app/",
+        github: "https://github.com/siddhx579/ai-mock-interviewer",
     },
     {
         num: "03",
-        category: "backend",
+        category: "Spotify Clone",
         title: "Project 3",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nemo beatae. Natus voluptatibus ipsa ut?",
+        description: "This is a full-featured responsive Spotify clone built using the MERN stack (MongoDB, Express.js, React, and Node.js). The project aims to replicate core Spotify functionalities, allowing users to browse, play, and manage music content in a seamless and interactive interface.",
         stack: [
-            { name: "HTML" },
-            { name: "Next.js" },
-            { name: "Javascript" },
+            { name: "React.js" },
+            { name: "Node.js" },
+            { name: "MongoDB" },
         ],
         image: "/assets/work/thumb3.png",
         live: "",
-        github: "",
+        github: "https://github.com/siddhx579/Spotify-Clone",
+    },
+    {
+        num: "04",
+        category: "NextTask",
+        title: "Project 4",
+        description: "It is an advanced and modern task app built using next.js, prisma and tailwind.css",
+        stack: [
+            { name: "Next.js" },
+            { name: "Prisma" },
+            { name: "Tailwind CSS" },
+        ],
+        image: "",
+        live: "",
+        github: "https://github.com/siddhx579/task-app",
+    },
+    {
+        num: "05",
+        category: "Home Automation",
+        title: "Project 5",
+        description: "This project demonstrates how to create a home automation system using an ESP8266 microcontroller, the Blynk app, and a 4-channel relay. The setup allows you to control four different devices through the Blynk app on your smartphone.",
+        stack: [
+            { name: "Arduino" },
+            { name: "Blynk" },
+            { name: "NodeMCU" },
+        ],
+        image: "",
+        live: "",
+        github: "https://github.com/siddhx579/Home-Automation-using-ESP8266",
     },
 ];
 
@@ -69,7 +97,7 @@ const Work = () => {
                     <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-[20px]">
                             <div className="text-7xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
-                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
                             <p className="text-white/60 ">{project.description}</p>
                             <ul className="flex gap-4">
                                 {project.stack.map((item, index) => {
@@ -78,7 +106,7 @@ const Work = () => {
                             </ul>
                             <div className="border border-white/20"></div>
                             <div className="flex items-center gap-4">
-                                <Link href={project.live}>
+                                <Link target="_blank" href={project.live}>
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -90,7 +118,7 @@ const Work = () => {
                                         </Tooltip>
                                     </TooltipProvider>
                                 </Link>
-                                <Link href={project.github}>
+                                <Link target="_blank" href={project.github}>
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -112,7 +140,7 @@ const Work = () => {
                                     <div className="h-[410px] relative group flex justify-center items-center bg-pink-50/20">
                                         <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                                         <div className="relative w-full h-full">
-                                            <Image src={project.image} fill className="object-cover" alt="" />
+                                            <Image src={project.image} fill className="bject-cover" alt="" />
                                         </div>
                                     </div>
                                 </SwiperSlide>;
