@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
+        <CanvasCursor />
         <Header />
         <StairTransition />
         <PageTransition>
-          <CanvasCursor />
           {children}
         </PageTransition>
       </body>
