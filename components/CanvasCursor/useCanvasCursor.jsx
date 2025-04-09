@@ -165,6 +165,7 @@ const useCanvasCursor = () => {
         resizeCanvas();
     };
     useEffect(() => {
+        if (typeof window !== "undefined" && window.innerWidth < 768) return;
         renderCanvas();
         return () => {
             ctx.running = false;
