@@ -1,3 +1,4 @@
+import GradientText from "@/components/GradientText/GradientText";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
@@ -12,7 +13,11 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Web Developer</span>
             <h1 className="h1">
-              Hello I&apos;m <br /> <span className="text-accent">Siddhant Kapoor</span>
+              Hello I&apos;m <br />
+              {/* <span className="text-accent">Siddhant Kapoor</span> */}
+              <GradientText colors={["#00ff99", "#fff", "#00ff99", "#fff", "#00ff99", ]} animationSpeed={3} showBorder={false} className="custom-class">
+                Siddhant Kapoor
+              </GradientText>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I excel at creating elegant digital experiences and I am proficient in various programming languages and technologies.
