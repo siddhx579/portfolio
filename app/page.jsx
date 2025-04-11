@@ -1,3 +1,4 @@
+"use client";
 import GradientText from "@/components/GradientText/GradientText";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
@@ -15,7 +16,12 @@ const Home = () => {
             <h1 className="h1">
               Hello I&apos;m <br />
               {/* <span className="text-accent">Siddhant Kapoor</span> */}
-              <GradientText colors={["#00ff99", "#fff", "#00ff99", "#fff", "#00ff99", ]} animationSpeed={3} showBorder={false} className="custom-class">
+              <GradientText
+                colors={["#00ff99", "#fff", "#00ff99", "#fff", "#00ff99"]}
+                animationSpeed={3}
+                showBorder={false}
+                className="custom-class"
+              >
                 Siddhant Kapoor
               </GradientText>
             </h1>
