@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export default function GradientText({
     children,
     className = "",
@@ -11,7 +12,10 @@ export default function GradientText({
     };
 
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.5 }}
             className={`relative mx-auto flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium transition-shadow duration-500 overflow-hidden cursor-pointer ${className}`}
         >
             {showBorder && (
@@ -45,7 +49,7 @@ export default function GradientText({
             >
                 {children}
             </div>
-        </div>
+        </motion.div>
     );
 }
 
