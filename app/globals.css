@@ -3,22 +3,52 @@
 @tailwind utilities;
 
 @layer base {
-  body{
+  body {
     @apply font-primary bg-primary text-white leading-loose;
   }
+
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
   }
+
   .h2 {
     @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
   }
+
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
+
+  /* Text outline effect */
   .text-outline {
     -webkit-text-stroke: 1px #ffffff;
   }
+
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
+  }
+
+  /* Animated gradient effect on text */
+  .animated-gradient {
+    background: linear-gradient(45deg, #00ff99, #fff, #00ff99, #fff, #00ff99);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+  }
+}
+
+/* Add the gradient animation to keyframes */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
