@@ -22,11 +22,6 @@ module.exports = {
 		},
 		extend: {
 			keyframes: {
-				gradient: {
-					'0%': { backgroundPosition: '0% 50%' },
-					'50%': { backgroundPosition: '100% 50%' },
-					'100%': { backgroundPosition: '0% 50%' },
-				},
 				"accordion-down": {
 					from: { height: "0" },
 					to: { height: "var(--radix-accordion-content-height)" },
@@ -35,20 +30,26 @@ module.exports = {
 					from: { height: "var(--radix-accordion-content-height)" },
 					to: { height: "0" },
 				},
+				// Updated gradient animation with #00ff99 and #fff
+				gradientAnimation: {
+					"0%": { "background-position": "0% 50%" },
+					"50%": { "background-position": "100% 50%" },
+					"100%": { "background-position": "0% 50%" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
-				gradient: 'gradient 8s linear infinite',
+				"gradient-animation": "gradientAnimation 5s ease infinite",
 			},
 			colors: {
 				primary: "#1c1c22",
 				accent: {
 					DEFAULT: "#00ff99",
-					hover: "00e187",
-				}
+					hover: "#00e187",
+				},
 			},
-		}
+		},
 	},
 	plugins: [require("tailwindcss-animate")],
-};
+};  
