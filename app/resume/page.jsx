@@ -21,7 +21,7 @@ const about = {
         },
         {
             fieldName: "Experience",
-            fieldValue: "4 months",
+            fieldValue: "11 months",
         },
         {
             fieldName: "Email",
@@ -68,7 +68,7 @@ const education = {
         },
         {
             institution: "DLF Public School",
-            degree: "Higher Secondary",
+            degree: "Senior Secondary",
             duration: "2021 - 2022",
         },
         {
@@ -124,10 +124,10 @@ const Resume = () => {
             <div className="container mx-auto">
                 <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
                     <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-                        <TabsTrigger value="experience">Experience</TabsTrigger>
-                        <TabsTrigger value="education">Education</TabsTrigger>
-                        <TabsTrigger value="skills">Skills</TabsTrigger>
-                        <TabsTrigger value="about">About me</TabsTrigger>
+                        <TabsTrigger className='bg-white/5 backdrop-blur-md' value="experience">Experience</TabsTrigger>
+                        <TabsTrigger className='bg-white/5 backdrop-blur-md' value="education">Education</TabsTrigger>
+                        <TabsTrigger className='bg-white/5 backdrop-blur-md' value="skills">Skills</TabsTrigger>
+                        <TabsTrigger className='bg-white/5 backdrop-blur-md' value="about">About me</TabsTrigger>
                     </TabsList>
                     <div className="min-h-[70vh] w-full">
                         <TabsContent value="experience" className="w-full h-full">
@@ -137,7 +137,7 @@ const Resume = () => {
                                 <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => {
-                                            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                                            return <li key={index} className="bg-white/5 backdrop-blur-md h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                                                 <span className="text-accent">{item.duration}</span>
                                                 <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                                                 <div className="flex items-center gap-3">
@@ -157,7 +157,7 @@ const Resume = () => {
                                 <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {education.items.map((item, index) => {
-                                            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                                            return <li key={index} className="bg-white/5 backdrop-blur-md h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                                                 <span className="text-accent">{item.duration}</span>
                                                 <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                                                 <div className="flex items-center gap-3">
@@ -185,7 +185,7 @@ const Resume = () => {
                                         return <li key={index}>
                                             <TooltipProvider delayDuration={100}>
                                                 <Tooltip>
-                                                    <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                                    <TooltipTrigger className="w-full h-[150px] bg-white/5 backdrop-blur-md rounded-xl flex justify-center items-center group">
                                                         <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
                                                     </TooltipTrigger>
                                                     <TooltipContent>
