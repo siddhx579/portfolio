@@ -29,13 +29,13 @@ const projects = [
         num: "02",
         category: "MockMate",
         title: "Project 2",
-        description: "This is a full stack AI mock interview app with Next.js | React, Drizzle ORM, Gemini AI, Clerk",
+        description: "It is an AI-powered mock interview platform designed to help job seekers prepare for real-world interviews by simulating interactive interview sessions. It provides AI-generated questions, live feedback, and performance evaluation, helping users refine their responses, boost confidence, and enhance their interview skills.",
         stack: [
             { name: "Next.js" },
             { name: "Gemini AI" },
             { name: "Drizzle ORM" },
         ],
-        image: "/assets/work/thumb5.png",
+        image: "/assets/work/thumb2.jpg",
         live: "https://mockmate-interviewer.vercel.app/",
         github: "https://github.com/siddhx579/ai-mock-interviewer",
     },
@@ -113,7 +113,7 @@ const Work = () => {
                         <div className="flex flex-col gap-[20px]">
                             <div className="text-7xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
                             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
-                            <p className="text-white/60 ">{project.description}</p>
+                            <p className="text-justify text-white/60 ">{project.description}</p>
                             <ul className="flex gap-4">
                                 {project.stack.map((item, index) => {
                                     return <li key={index} className="text-xl text-accent">{item.name}{index !== project.stack.length - 1 && ","}</li>;
