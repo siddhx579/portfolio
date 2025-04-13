@@ -57,7 +57,7 @@ const Blogs = () => {
                         >
                             <div>
                                 <h3 className="text-xl font-bold mb-3 text-white">{blog.title}</h3>
-                                <p className="text-sm text-white/70 line-clamp-3">{blog.description}</p>
+                                <p className="text-sm text-white/70 line-clamp-3 text-justify">{blog.description}</p>
                             </div>
                             <div className="flex justify-between items-end mt-4">
                                 <div className="flex gap-2 flex-wrap text-xs text-accent">
