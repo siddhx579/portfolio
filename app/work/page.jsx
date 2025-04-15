@@ -57,7 +57,7 @@ const projects = [
         num: "04",
         category: "NextTask",
         title: "Project 4",
-        description: "It is an advanced and modern task app built using next.js, prisma and tailwind.css",
+        description: "It is a modern and advanced task management web application built with Next.js, Prisma, and Clerk authentication. It helps users manage tasks efficiently with a clean and intuitive UI.",
         stack: [
             { name: "Next.js" },
             { name: "Prisma" },
