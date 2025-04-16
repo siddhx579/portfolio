@@ -6,9 +6,9 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 const blogDetails = {
-    "01": {
-        title: "Mastering the Next.js App Router: A New Era of Routing",
-        content: `## What's New?
+  "01": {
+    title: "Mastering the Next.js App Router: A New Era of Routing",
+    content: `## What's New?
 
 - **Layouts**: You can now define persistent layouts that wrap around your pages using \`layout.js\`.
 - **Nested Routes**: Organize your app into deeply nested folders representing routes.
@@ -115,10 +115,10 @@ The App Router also brings improved performance by utilizing React Suspense. It 
 ## Wrap-up
 
 The App Router is a game changer for developers working with Next.js. By adopting layouts, nested routes, and server components, you can create more efficient, scalable, and organized web applications. Whether you're building a small site or a large-scale app, the App Router helps you keep things clean and manageable while also enhancing performance.`,
-    },
-    "02": {
-        title: "How to Supercharge Your Web App with AI APIs",
-        content: `Bringing AI to your frontend or full-stack app is easier than ever with APIs from OpenAI, Gemini, Cohere, and others. These powerful APIs provide advanced machine learning capabilities without the need for in-depth ML knowledge, making it easier than ever to enhance your app's features.
+  },
+  "02": {
+    title: "How to Supercharge Your Web App with AI APIs",
+    content: `Bringing AI to your frontend or full-stack app is easier than ever with APIs from OpenAI, Gemini, Cohere, and others. These powerful APIs provide advanced machine learning capabilities without the need for in-depth ML knowledge, making it easier than ever to enhance your app's features.
 
 ## Why Use AI APIs?
 
@@ -183,10 +183,10 @@ While AI APIs can greatly enhance user experience, it's important to consider th
 ## Wrap-up
 
 AI APIs unlock serious potential for developers. Start small with basic features like text summarization or sentiment analysis, then scale your application by adding more advanced AI tasks as your app grows. As machine learning models become more accessible, the opportunities for creating intelligent, personalized applications are endless. Whether you're building a chatbot, a recommendation engine, or an intelligent search feature, AI APIs offer the flexibility and power you need to enhance your app with cutting-edge technology.`,
-    },
-    "03": {
-        title: "Server Actions in Next.js 14: The Game Changer You Need to Know",
-        content: `Next.js 14 introduces **Server Actions**, simplifying how you write server-side logic in React. Server Actions eliminate the need for separate API routes and enable a more seamless developer experience when working with server-side operations.
+  },
+  "03": {
+    title: "Server Actions in Next.js 14: The Game Changer You Need to Know",
+    content: `Next.js 14 introduces **Server Actions**, simplifying how you write server-side logic in React. Server Actions eliminate the need for separate API routes and enable a more seamless developer experience when working with server-side operations.
 
 ## What Are Server Actions?
 
@@ -261,10 +261,10 @@ In this case, we've added a \`authenticateUser\` function to handle user login. 
 Server Actions in Next.js 14 provide a powerful and efficient way to handle server-side logic directly in your React components. They eliminate the need for API routes, making the development process faster and simpler. By integrating server-side logic directly with React, Next.js helps reduce boilerplate and improves the scalability of your applications. Whether you are handling form submissions, managing authentication, or processing data on the server, Server Actions streamline server-side communication, enhancing your development experience.
 
 Start using Server Actions today and experience faster, cleaner code with fewer API route headaches.`,
-    },
-    "04": {
-        title: "From Prompt to Product: How I Built an AI Content Generator App",
-        content: `This is the story of building an AI content generator using **Next.js**, **Clerk**, **Tailwind CSS**, and **OpenAI**. The goal of this project was to provide an easy-to-use platform that generates high-quality content based on user input, enabling users to automate content creation tasks and enhance their productivity.
+  },
+  "04": {
+    title: "From Prompt to Product: How I Built an AI Content Generator App",
+    content: `This is the story of building an AI content generator using **Next.js**, **Clerk**, **Tailwind CSS**, and **OpenAI**. The goal of this project was to provide an easy-to-use platform that generates high-quality content based on user input, enabling users to automate content creation tasks and enhance their productivity.
 
 ## The Stack
 
@@ -322,33 +322,33 @@ By leveraging edge functions and server-side rendering (SSR), the content genera
 It was a fun challenge and now I have a usable tool powered by AI. This AI content generator helps to streamline content creation and can be a valuable asset for bloggers, marketers, or anyone looking to automate content production. Can't wait to ship the next feature, and I look forward to enhancing the tool with new capabilities like integrating more AI models or enabling advanced user customization!
 
 With the current stack, the possibilities are endless. As AI continues to improve, I'm excited to see how this tool can evolve and better serve users in creating meaningful and creative content.`,
-    },
+  },
 };
 
 const BlogPost = () => {
-    const { template_id } = useParams();
-    const [blogData, setBlogData] = useState(null);
+  const { template_id } = useParams();
+  const [blogData, setBlogData] = useState(null);
 
-    useEffect(() => {
-        if (template_id) {
-            setBlogData(blogDetails[template_id]);
-        }
-    }, [template_id]);
+  useEffect(() => {
+    if (template_id) {
+      setBlogData(blogDetails[template_id]);
+    }
+  }, [template_id]);
 
-    if (!blogData) return <div className="text-white p-6">Loading...</div>;
+  if (!blogData) return <div className="text-white p-6">Loading...</div>;
 
-    return (
-        <div className="max-w-3xl mx-auto text-white p-6">
-            <h1 className="text-4xl font-bold mb-6 text-center text-accent">{blogData.title}</h1>
-            <hr />
-            <br />
-            <div className="prose prose-invert prose-pre:bg-white/10 prose-pre:text-white prose-code:text-white prose-li:marker:text-white/60 max-w-none text-justify">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {blogData.content}
-                </ReactMarkdown>
-            </div>
-        </div>
-    );
+  return (
+    <div className="max-w-3xl mx-auto text-white p-6">
+      <h1 className="text-4xl font-bold mb-6 text-center text-accent">{blogData.title}</h1>
+      <hr />
+      <br />
+      <div className="prose prose-invert prose-pre:bg-white/10 prose-pre:text-white prose-code:text-white prose-li:marker:text-white/60 max-w-none text-justify">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {blogData.content}
+        </ReactMarkdown>
+      </div>
+    </div>
+  );
 };
 
 export default BlogPost;
