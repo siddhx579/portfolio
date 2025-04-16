@@ -36,9 +36,30 @@
     color: transparent;
     animation: gradientAnimation 7s ease infinite;
   }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #00ff99;
+    border-radius: 9999px;
+    border: 0px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #00e187;
+  }
 }
 
-/* Add the gradient animation to keyframes */
+/* Keyframes for animated gradient */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
