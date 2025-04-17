@@ -1,4 +1,5 @@
 import Photo from "@/components/Photo";
+import RotatingText from "@/components/Rotating Text/RotatingText";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
@@ -15,9 +16,26 @@ const Home = () => {
               Hello I&apos;m <br />
               <span className="animated-gradient">Siddhant Kapoor</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] text-justify text-white/80">
               I excel at creating elegant digital experiences and I am proficient in various programming languages and technologies.
             </p>
+            <div className="flex flex-wrap justify-center xl:justify-start items-center gap-3 mb-9 text-white/80">
+              <span>Curently working with </span>
+              <RotatingText
+                texts={['Next.js', 'TypeScript', 'Tailwind CSS']}
+                mainClassName="px-2 py-0.5 bg-accent text-black overflow-hidden justify-center rounded-md"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
+                animationDelay={1100} // <-- add this!
+              />
+            </div>
+
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="https://drive.google.com/uc?export=download&id=12agRxCUDcEBfNRYYNoByTm3CwVpYjIl-" download="Siddhant_Resume.pdf">
                 <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
