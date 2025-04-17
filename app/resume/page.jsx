@@ -41,7 +41,7 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My experience',
-    description: "I am a full stack developer with a passion for building scalable and efficient applications.",
+    description: "Currently no professional experience — actively working on real-world projects and building skills through self-driven development. Do check out my work!",
     items: [
         {
             company: "Tech Solutions",
@@ -133,8 +133,8 @@ const Resume = () => {
                         <TabsContent value="experience" className="w-full h-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                                <ScrollArea className="h-[400px]">
+                                <p className="max-w-[600px] text-justify text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+                                {/* <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => {
                                             return <li key={index} className="bg-white/5 backdrop-blur-md h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
@@ -147,7 +147,7 @@ const Resume = () => {
                                             </li>
                                         })}
                                     </ul>
-                                </ScrollArea>
+                                </ScrollArea> */}
                             </div>
                         </TabsContent>
                         <TabsContent value="education" className="w-full h-full">
@@ -201,7 +201,7 @@ const Resume = () => {
                         <TabsContent value="about" className="w-full h-full text-center xl:text-left">
                             <div className="flex flex-col gap-[30px]">
                                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                                <p className="max-w-[600px] text-justify text-white/60 mx-auto xl:mx-0">{about.description}</p>
                                 <ul className="grid gird-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                                     {about.info.map((item, index) => {
                                         return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
