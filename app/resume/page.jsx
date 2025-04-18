@@ -198,7 +198,7 @@ const Resume = () => {
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
                                     I love combining clean UI with smooth animations using tools like Tailwind CSS and Framer Motion, and I&apos;m always experimenting with frameworks like Next.js and Clerk for authentication and edge-ready apps. I thrive on learning fast, solving problems, and turning ideas into elegant digital solutions.</p>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
-                                    I'm currently looking for opportunities to collaborate, learn, and grow by contributing to projects that make a difference.
+                                    I&apos;m currently looking for opportunities to collaborate, learn, and grow by contributing to projects that make a difference.
                                 </p>
                             </div>
                         </TabsContent>
