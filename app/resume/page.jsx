@@ -164,7 +164,7 @@ const Resume = () => {
                             About me
                         </TabsTrigger>
                     </TabsList>
-                    <div className="min-h-[70vh] w-full overflow-y-auto">
+                    <div className="min-h-[70vh] w-full overflow-x-hidden">
                         {/* EXPERIENCE */}
                         <TabsContent value="experience">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -251,7 +251,7 @@ const Resume = () => {
                                             className="flex items-center justify-center xl:justify-start gap-4"
                                         >
                                             <span className="text-white/60">{item.fieldName}</span>
-                                            <span className="text-xl break-words">{item.fieldValue}</span>
+                                            <span className="text-xl whitespace-pre-wrap break-words">{item.fieldValue}</span>
                                         </li>
                                     ))}
                                 </ul>
