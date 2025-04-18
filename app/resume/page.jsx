@@ -11,19 +11,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
-const about = {
-    title: "About Me",
-    description: "I am a full stack developer with a passion for building scalable and efficient applications.",
-    info: [
-        { fieldName: "Name", fieldValue: "Siddhant Kapoor" },
-        { fieldName: "Phone", fieldValue: "(+91) 8368731961" },
-        { fieldName: "Experience", fieldValue: "11 months" },
-        { fieldName: "Email", fieldValue: "siddhantkapoor579@gmail.com" },
-        { fieldName: "Nationality", fieldValue: "Indian" },
-        { fieldName: "Languages", fieldValue: "English, Hindi" },
-    ],
-};
-
 const experience = {
     icon: "/assets/resume/badge.svg",
     title: "My experience",
@@ -139,7 +126,7 @@ const Resume = () => {
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">{experience.description}</p>
-                                <ScrollArea className="h-[400px]">
+                                {/* <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => (
                                             <li
@@ -157,7 +144,7 @@ const Resume = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                </ScrollArea>
+                                </ScrollArea> */}
                             </div>
                         </TabsContent>
 
@@ -205,21 +192,14 @@ const Resume = () => {
                         {/* ABOUT */}
                         <TabsContent value="about">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">{about.title}</h3>
+                                <h3 className="text-4xl font-bold">About Me</h3>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
-                                    {about.description}
+                                    I&apos;m a Computer Science student and a passionate full-stack web developer focused on building impactful, real-world applications. With a strong foundation in the MERN stack, I&apos;ve developed several projects including a Spotify clone, an AI-powered resume builder (ResumeMint), a Discord-style messaging app, and a real estate listing platform.</p>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
+                                    I love combining clean UI with smooth animations using tools like Tailwind CSS and Framer Motion, and I&apos;m always experimenting with frameworks like Next.js and Clerk for authentication and edge-ready apps. I thrive on learning fast, solving problems, and turning ideas into elegant digital solutions.</p>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
+                                    I'm currently looking for opportunities to collaborate, learn, and grow by contributing to projects that make a difference.
                                 </p>
-                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                                    {about.info.map((item, index) => (
-                                        <li
-                                            key={index}
-                                            className="flex items-start justify-center xl:justify-start gap-4 break-words max-w-full"
-                                        >
-                                            <span className="text-white/60 whitespace-nowrap">{item.fieldName}:</span>
-                                            <span className="text-xl break-all">{item.fieldValue}</span>
-                                        </li>
-                                    ))}
-                                </ul>
                             </div>
                         </TabsContent>
                     </div>
