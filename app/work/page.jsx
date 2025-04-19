@@ -114,13 +114,13 @@ const Work = () => {
                             <div className="text-7xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
                             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
                             <p className="text-justify text-white/60 ">{project.description}</p>
-                            <ul className="flex gap-4">
+                            <ul className="flex flex-wrap gap-4">
                                 {project.stack.map((item, index) => {
                                     return <li key={index} className="text-xl text-accent">{item.name}{index !== project.stack.length - 1 && ","}</li>;
                                 })}
                             </ul>
                             <div className="border border-white/20"></div>
-                            <div className="flex items-center gap-4">
+                            <div className="flex flex-wrap items-center gap-4">
                                 {project.live && (
                                     <Link target="_blank" href={project.live}>
                                         <TooltipProvider delayDuration={100}>
