@@ -156,10 +156,10 @@ const Work = () => {
                         <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
                             {projects.map((project, index) => {
                                 return <SwiperSlide key={index} className="w-full">
-                                    <div className="h-[410px] relative group flex justify-center items-center bg-pink-50/20 rounded-2xl">
+                                    <div className="h-[300px] sm:h-[410px] relative group flex justify-center items-center bg-pink-50/20 rounded-2xl">
                                         <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                                         <div className="relative w-full h-full rounded-2xl">
-                                            <Image src={project.image} fill className="object-cover rounded-2xl" alt="project image" />
+                                            <Image src={project.image} fill className="object-cover fill rounded-2xl" alt="project image" />
                                         </div>
                                     </div>
                                 </SwiperSlide>;
