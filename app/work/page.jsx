@@ -84,15 +84,30 @@ const projects = [
     },
     {
         num: "06",
-        category: "Home Automation",
+        category: "Anime Universe",
         title: "Project 6",
+        description: "It is a modern, responsive web application that serves as a comprehensive database for anime and manga, similar to IMDB but specifically designed for anime enthusiasts. Built with Next.js 15 and React 18, this platform provides detailed information about anime series, movies, and manga, including episodes, characters, voice actors, ratings, and more.",
+        stack: [
+            { name: "Next.js" },
+            { name: "Typescript" },
+            { name: "Jikan API" },
+            { name: "Tailwind v4" },
+        ],
+        image: "/assets/work/thumb6.jpg",
+        live: "https://anime-universe-sid.vercel.app/",
+        github: "https://github.com/siddhx579/anime-universe",
+    },
+    {
+        num: "07",
+        category: "Home Automation",
+        title: "Project 7",
         description: "This project demonstrates how to create a home automation system using an ESP8266 microcontroller, the Blynk app, and a 4-channel relay. The setup allows you to control four different devices through the Blynk app on your smartphone.",
         stack: [
             { name: "Arduino" },
             { name: "Blynk" },
             { name: "NodeMCU" },
         ],
-        image: "/assets/work/thumb6.jpg",
+        image: "/assets/work/thumb7.jpg",
         live: "",
         github: "https://github.com/siddhx579/Home-Automation-using-ESP8266",
     },
@@ -153,7 +168,7 @@ const Work = () => {
                         </div>
                     </div>
                     <div className="w-full xl:w-[50%] rounded-2xl">
-                        <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
+                        <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-6" onSlideChange={handleSlideChange}>
                             {projects.map((project, index) => {
                                 return <SwiperSlide key={index} className="w-full">
                                     <div className="h-[300px] sm:h-[410px] relative group flex justify-center items-center bg-pink-50/20 rounded-2xl">

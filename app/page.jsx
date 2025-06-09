@@ -22,7 +22,7 @@ const Home = () => {
             <div className="flex flex-wrap justify-center xl:justify-start items-center gap-3 mb-9 text-white/80">
               <span>Curently working with </span>
               <RotatingText
-                texts={['Next.js', 'TypeScript', 'Tailwind']}
+                texts={['Next.js', 'TypeScript', 'Tailwind', 'GraphQL']}
                 mainClassName="px-2 py-0.5 bg-accent text-black overflow-hidden justify-center rounded-md"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}

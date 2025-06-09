@@ -1,11 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-    FaHtml5, FaCss3, FaJava, FaJs, FaReact,
-    FaNodeJs, FaGitAlt, FaPython
-} from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiMysql } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJava, FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython, FaGithub } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiMysql, SiSupabase, SiMongodb, SiPrisma, SiTypescript, SiFramer, SiExpress, SiFirebase, SiPostgresql, SiVercel, SiIntellijidea, SiNpm, SiVite } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { TbBrandCpp } from "react-icons/tb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -54,19 +53,34 @@ const education = {
 
 const skills = {
     title: "My skills",
-    description: "",
+    description: "Categorized by role for better clarity",
     skillList: [
-        { icon: <FaHtml5 />, name: "HTML5" },
-        { icon: <FaCss3 />, name: "CSS3" },
-        { icon: <FaJava />, name: "Java" },
-        { icon: <FaJs />, name: "JavaScript" },
-        { icon: <FaReact />, name: "React" },
-        { icon: <FaNodeJs />, name: "Node.js" },
-        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-        { icon: <SiNextdotjs />, name: "Next.js" },
-        { icon: <FaGitAlt />, name: "Git" },
-        { icon: <SiMysql />, name: "MySQL" },
-        { icon: <FaPython />, name: "Python" },
+        { icon: <FaHtml5 />, name: "HTML5", category: "Frontend" },
+        { icon: <FaCss3 />, name: "CSS3", category: "Frontend" },
+        { icon: <FaJs />, name: "JavaScript", category: "Frontend" },
+        { icon: <SiTypescript />, name: "TypeScript", category: "Frontend" },
+        { icon: <FaReact />, name: "React", category: "Frontend" },
+        { icon: <SiTailwindcss />, name: "Tailwind CSS", category: "Frontend" },
+        { icon: <SiNextdotjs />, name: "Next.js", category: "Frontend" },
+        { icon: <SiFramer />, name: "Framer Motion", category: "Frontend" },
+        { icon: <FaNodeJs />, name: "Node.js", category: "Backend" },
+        { icon: <SiExpress />, name: "Express.js", category: "Backend" },
+        { icon: <SiPrisma />, name: "Prisma", category: "Backend" },
+        { icon: <SiSupabase />, name: "Supabase", category: "Backend" },
+        { icon: <SiFirebase />, name: "Firebase", category: "Backend" },
+        { icon: <SiMongodb />, name: "MongoDB", category: "Database" },
+        { icon: <SiMysql />, name: "MySQL", category: "Database" },
+        { icon: <SiPostgresql />, name: "PostgreSQL", category: "Database" },
+        { icon: <FaGitAlt />, name: "Git", category: "Tools" },
+        { icon: <FaGithub />, name: "GitHub", category: "Tools" },
+        { icon: <SiVercel />, name: "Vercel", category: "Tools" },
+        { icon: <VscVscode />, name: "VS Code", category: "Tools" },
+        { icon: <SiIntellijidea />, name: "Intellij Idea", category: "Tools" },
+        { icon: <SiNpm />, name: "npm", category: "Tools" },
+        { icon: <SiVite />, name: "Vite", category: "Tools" },
+        { icon: <FaJava />, name: "Java", category: "Languages" },
+        { icon: <FaPython />, name: "Python", category: "Languages" },
+        { icon: <TbBrandCpp />, name: "C++", category: "Languages" },
     ],
 };
 
@@ -113,7 +127,7 @@ const Resume = () => {
         >
             <div className="container mx-auto px-4">
                 <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
-                    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+                    <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-4">
                         <TabsTrigger className="bg-white/5 backdrop-blur-md" value="experience">Experience</TabsTrigger>
                         <TabsTrigger className="bg-white/5 backdrop-blur-md" value="education">Education</TabsTrigger>
                         <TabsTrigger className="bg-white/5 backdrop-blur-md" value="skills">Skills</TabsTrigger>
@@ -176,16 +190,33 @@ const Resume = () => {
 
                         {/* SKILLS */}
                         <TabsContent value="skills">
-                            <div className="flex flex-col gap-[30px]">
-                                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                    <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
-                                </div>
-                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                                    {skills.skillList.map((skill, index) => (
-                                        <SkillTooltip key={index} icon={skill.icon} name={skill.name} />
+                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                                <h3 className="text-4xl font-bold">{skills.title}</h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+
+                                {/* Inner Skills Tabs */}
+                                <Tabs defaultValue="Frontend" className="w-full">
+                                    <TabsList className="flex flex-row justify-center xl:justify-start gap-2">
+                                        {["Frontend", "Backend", "Database", "Tools", "Languages"].map((category) => (
+                                            <TabsTrigger key={category} value={category} className="capitalize bg-white/5 backdrop-blur-md">
+                                                {category}
+                                            </TabsTrigger>
+                                        ))}
+                                    </TabsList>
+
+                                    {["Frontend", "Backend", "Database", "Tools", "Languages"].map((category) => (
+                                        <TabsContent key={category} value={category}>
+                                            {/* <h4 className="text-2xl font-semibold mt-4 mb-4 text-accent">{category}</h4> */}
+                                            <ul className="grid grid-cols-2 mt-8 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                                                {skills.skillList
+                                                    .filter((skill) => skill.category === category)
+                                                    .map((skill, index) => (
+                                                        <SkillTooltip key={index} icon={skill.icon} name={skill.name} />
+                                                    ))}
+                                            </ul>
+                                        </TabsContent>
                                     ))}
-                                </ul>
+                                </Tabs>
                             </div>
                         </TabsContent>
 
