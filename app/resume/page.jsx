@@ -196,12 +196,21 @@ const Resume = () => {
 
                                 {/* Inner Skills Tabs */}
                                 <Tabs defaultValue="Frontend" className="w-full">
-                                    <TabsList className="flex flex-row justify-center xl:justify-start gap-2">
-                                        {["Frontend", "Backend", "Database", "Tools", "Languages"].map((category) => (
+                                    <TabsList className="w-full mx-auto grid grid-cols-3 gap-2 max-w-sm xl:flex xl:flex-row xl:justify-start xl:max-w-none xl:mx-0">
+                                        {["Frontend", "Backend", "Database"].map((category) => (
                                             <TabsTrigger key={category} value={category} className="capitalize bg-white/5 backdrop-blur-md">
                                                 {category}
                                             </TabsTrigger>
                                         ))}
+
+                                        {/* Wrap the last two in a full-width row and center them only on mobile */}
+                                        <div className="col-span-3 flex justify-center gap-2 xl:flex xl:flex-row xl:justify-start xl:col-span-1 xl:gap-2">
+                                            {["Tools", "Languages"].map((category) => (
+                                                <TabsTrigger key={category} value={category} className="capitalize bg-white/5 backdrop-blur-md">
+                                                    {category}
+                                                </TabsTrigger>
+                                            ))}
+                                        </div>
                                     </TabsList>
 
                                     {["Frontend", "Backend", "Database", "Tools", "Languages"].map((category) => (
