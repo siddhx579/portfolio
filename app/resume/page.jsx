@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaHtml5, FaCss3, FaJava, FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiMysql, SiSupabase, SiMongodb, SiPrisma, SiTypescript, SiFramer, SiExpress, SiFirebase, SiPostgresql, SiVercel, SiIntellijidea, SiNpm, SiVite } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJava, FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython, FaGithub, FaDiscord } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiMysql, SiSupabase, SiMongodb, SiPrisma, SiTypescript, SiFramer, SiExpress, SiFirebase, SiPostgresql, SiVercel, SiIntellijidea, SiNpm, SiVite, SiArduino, SiPycharm } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandCpp } from "react-icons/tb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -78,6 +78,9 @@ const skills = {
         { icon: <SiIntellijidea />, name: "Intellij Idea", category: "Tools" },
         { icon: <SiNpm />, name: "npm", category: "Tools" },
         { icon: <SiVite />, name: "Vite", category: "Tools" },
+        { icon: <SiArduino />, name: "Arduino", category: "Tools" },
+        { icon: <FaDiscord />, name: "Discord", category: "Tools" },
+        { icon: <SiPycharm />, name: "PyCharm", category: "Tools" },
         { icon: <FaJava />, name: "Java", category: "Languages" },
         { icon: <FaPython />, name: "Python", category: "Languages" },
         { icon: <TbBrandCpp />, name: "C++", category: "Languages" },
