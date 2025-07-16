@@ -16,7 +16,7 @@ const experience = {
     description: "Currently no professional experience — actively working on real-world projects and building skills through self-driven development. Do check out my work!",
     items: [
         {
-            company: "Space Applications Centre - ISRO",
+            company: "SAC - ISRO",
             position: "Web Developer",
             duration: "July 2025 - Present",
         },
