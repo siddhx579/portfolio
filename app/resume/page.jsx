@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaHtml5, FaCss3, FaJava, FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJava, FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython, FaGithub, FaDiscord, FaVuejs } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiMysql, SiSupabase, SiMongodb, SiPrisma, SiTypescript, SiFramer, SiExpress, SiFirebase, SiPostgresql, SiVercel, SiIntellijidea, SiNpm, SiVite, SiArduino, SiPycharm } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandCpp } from "react-icons/tb";
@@ -16,15 +16,15 @@ const experience = {
     description: "Currently no professional experience — actively working on real-world projects and building skills through self-driven development. Do check out my work!",
     items: [
         {
-            company: "Tech Solutions",
-            position: "Full Stack Developer",
-            duration: "Jan 2020 - Present",
+            company: "Space Applications Centre - ISRO",
+            position: "Web Developer",
+            duration: "July 2025 - Present",
         },
-        {
-            company: "ABC Corporation",
-            position: "Junior Developer",
-            duration: "Jun 2019 - Dec 2019",
-        },
+        // {
+        //     company: "ABC Corporation",
+        //     position: "Junior Developer",
+        //     duration: "Jun 2019 - Dec 2019",
+        // },
     ],
 };
 
@@ -63,6 +63,7 @@ const skills = {
         { icon: <SiTailwindcss />, name: "Tailwind CSS", category: "Frontend" },
         { icon: <SiNextdotjs />, name: "Next.js", category: "Frontend" },
         { icon: <SiFramer />, name: "Framer Motion", category: "Frontend" },
+        { icon: <FaVuejs />, name: "Vue.js", category: "Frontend" },
         { icon: <FaNodeJs />, name: "Node.js", category: "Backend" },
         { icon: <SiExpress />, name: "Express.js", category: "Backend" },
         { icon: <SiPrisma />, name: "Prisma", category: "Backend" },
@@ -142,8 +143,8 @@ const Resume = () => {
                         <TabsContent value="experience">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">{experience.description}</p>
-                                {/* <ScrollArea className="h-[400px]">
+                                {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">{experience.description}</p> */}
+                                <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => (
                                             <li
@@ -161,7 +162,7 @@ const Resume = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                </ScrollArea> */}
+                                </ScrollArea>
                             </div>
                         </TabsContent>
 
